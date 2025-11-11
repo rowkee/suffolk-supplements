@@ -28,10 +28,10 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h4 className="footer-heading">Connect</h4>
             <div className="footer-social">
-              <a href="#" aria-label="Facebook">
+              <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                 {FaFacebook({ size: 24 })}
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                 {FaInstagram({ size: 24 })}
               </a>
             </div>

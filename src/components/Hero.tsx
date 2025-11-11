@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import logo from "../logo-suffolk.png";
 
 const Hero: React.FC = () => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -54,31 +53,7 @@ const Hero: React.FC = () => {
               </p>
               <button className="cta-button">Learn Our Story</button>
             </div>
-            {/* <div className="hero-visual">
-              <div className="logo-large">
-                <img
-                  src={logo}
-                  alt="Suffolk Supplements"
-                  width="300"
-                  height="300"
-                />
-              </div>
-            </div> */}
           </div>
-          {/* <div className="trust-indicators">
-            <div className="indicator">
-              <div className="indicator-value">100%</div>
-              <div className="indicator-label">Natural</div>
-            </div>
-            <div className="indicator">
-              <div className="indicator-value">5k+</div>
-              <div className="indicator-label">Happy Customers</div>
-            </div>
-            <div className="indicator">
-              <div className="indicator-value">UK</div>
-              <div className="indicator-label">Made</div>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
