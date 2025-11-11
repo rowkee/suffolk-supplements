@@ -6,10 +6,10 @@
 }
 
 body {
-  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
-  color: #2c5f72;
-  background-color: #fafafa;
+  color: #223946;
+  background-color: #fdfcf9;
 }
 
 .container {
@@ -40,6 +40,18 @@ body {
   gap: 12px;
 }
 
+.logo-icon {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
 .logo-text {
   display: flex;
   flex-direction: column;
@@ -50,6 +62,8 @@ body {
   font-weight: 700;
   color: #2c5f72;
   letter-spacing: 2px;
+  margin-bottom: 0px;
+  line-height: 1;
 }
 
 .brand-subtitle {
@@ -57,6 +71,7 @@ body {
   color: #4a90a4;
   letter-spacing: 1px;
   margin-top: -2px;
+  padding-left: 2px;
 }
 
 .nav {
@@ -77,7 +92,7 @@ body {
 
 /* Hero Styles */
 .hero {
-  background: linear-gradient(135deg, #f8fcfd 0%, #e8f4f8 100%);
+  /* background: linear-gradient(135deg, #f8fcfd 0%, #e8f4f8 100%); */
   padding: 4rem 0 2rem;
 }
 
@@ -110,7 +125,7 @@ body {
 
 .hero-description {
   font-size: 1.2rem;
-  color: #5a7a8a;
+  /* color: #5a7a8a; */
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -139,6 +154,7 @@ body {
   background: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   padding: 2rem;
+  box-shadow: 0 10px 40px rgba(44, 95, 114, 0.15);
 }
 
 .brand-text-large {
