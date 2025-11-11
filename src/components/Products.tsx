@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import ProductCard from './ProductCard';
 import Modal from './Modal';
+import lionsManeImage from '../assets/products/lions-mane.png';
+import reishiImage from '../assets/products/reishi.png';
+import cordycepsImage from '../assets/products/cordyceps.png';
+import chagaImage from '../assets/products/chaga.png';
 
 interface Product {
   id: string;
@@ -20,28 +24,28 @@ const Products: React.FC = () => {
       name: "Lion's Mane",
       description: "Cognitive enhancement from nature's brain booster",
       benefits: ['Mental clarity', 'Focus enhancement', 'Memory support'],
-      image: '🦁'
+      image: lionsManeImage
     },
     {
       id: 'reishi',
       name: 'Reishi',
       description: 'The mushroom of immortality for stress relief',
       benefits: ['Stress reduction', 'Sleep quality', 'Immune support'],
-      image: '🍄'
+      image: reishiImage
     },
     {
       id: 'cordyceps',
       name: 'Cordyceps',
       description: 'Natural energy and athletic performance enhancer',
       benefits: ['Energy boost', 'Athletic performance', 'Vitality'],
-      image: '⚡'
+      image: cordycepsImage
     },
     {
       id: 'chaga',
       name: 'Chaga',
       description: 'Antioxidant powerhouse from the northern forests',
       benefits: ['Immune boost', 'Antioxidants', 'Overall wellness'],
-      image: '🌲'
+      image: chagaImage
     }
   ];
 

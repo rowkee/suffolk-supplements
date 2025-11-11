@@ -254,6 +254,15 @@ body {
   margin-bottom: 1rem;
 }
 
+.mushroom-icon img,
+img.mushroom-icon {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 .product-name {
   font-size: 1.5rem;
   font-weight: 700;
