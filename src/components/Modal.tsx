@@ -16,27 +16,50 @@ const Modal: React.FC<ModalProps> = ({ onClose, productName }) => {
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      console.log(`Email subscription for ${productName}: ${email}`);
+    try {
+      // Submit to Google Sheets via Apps Script webhook
+      // Using text/plain content type to avoid CORS preflight
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwJX5cmZirz1JTVAprejhlzBg81m5YwYpjxtBTD4MaVSUgifevvr-zZ1bquivx_bL6l/exec', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify({
+          email: email,
+          productName: productName
+        }),
+        redirect: 'follow'
+      });
 
-      // Analytics tracking
-      if (window.gtag) {
-        window.gtag('event', 'email_signup', {
-          event_category: 'conversion',
-          event_label: productName,
-          value: 1
-        });
+      const result = await response.json();
+
+      if (result.status === 'success') {
+        console.log(`Email subscription for ${productName}: ${email}`);
+
+        // Analytics tracking
+        if (window.gtag) {
+          window.gtag('event', 'email_signup', {
+            event_category: 'conversion',
+            event_label: productName,
+            value: 1
+          });
+        }
+
+        setIsSubmitted(true);
+
+        // Auto-close after success message
+        setTimeout(() => {
+          onClose();
+        }, 2000);
+      } else {
+        throw new Error(result.message || 'Subscription failed');
       }
-
-      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Subscription error:', error);
+      alert('There was an error subscribing. Please try again.');
+    } finally {
       setIsSubmitting(false);
-
-      // Auto-close after success message
-      setTimeout(() => {
-        onClose();
-      }, 2000);
-    }, 1000);
+    }
   };
 
   return (
