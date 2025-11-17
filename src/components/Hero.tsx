@@ -1,39 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero: React.FC = () => {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-
-  useEffect(() => {
-    // Check for reduced motion preference
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setPrefersReducedMotion(mediaQuery.matches);
-
-    // Listen for changes
-    const handleChange = (e: MediaQueryListEvent) => {
-      setPrefersReducedMotion(e.matches);
-    };
-
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
-
+  const navigate = useNavigate();
   return (
     <section className="hero" aria-label="Hero section with coastal background">
-      {/* Video Background Layer */}
-      {!prefersReducedMotion && (
-        <div className="hero-video-container">
-          <video
-            className="hero-video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-          >
-            <source src="/videos/hero-background.mp4" type="video/mp4" />
-          </video>
-        </div>
-      )}
+      {/* Image Background Layer */}
+      <div className="hero-image-container">
+        <img
+          src="/images/hero-background.jpg"
+          alt="Walberswick Beach coastal scenery"
+          className="hero-image"
+        />
+      </div>
 
       {/* Dark Overlay for Text Readability */}
       <div className="hero-overlay" aria-hidden="true" />
@@ -51,7 +30,12 @@ const Hero: React.FC = () => {
                 Premium supplements crafted with the vitality of coastal living.
                 Pure, natural, and powered by the elements.
               </p>
-              <button className="cta-button">Learn Our Story</button>
+              <button
+                className="cta-button"
+                onClick={() => navigate("/our-story")}
+              >
+                Learn Our Story
+              </button>
             </div>
           </div>
         </div>
