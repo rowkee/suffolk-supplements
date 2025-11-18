@@ -53,7 +53,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, productName }) => {
         // Auto-close after success message
         setTimeout(() => {
           onClose();
-        }, 2000);
+        }, 5000);
       } else {
         throw new Error(result.message || "Subscription failed");
       }
@@ -119,9 +119,8 @@ const Modal: React.FC<ModalProps> = ({ onClose, productName }) => {
             <div className="success-icon">🌊</div>
             <h3>Welcome aboard!</h3>
             <p>
-              Thanks for joining our coastal journey. We'll let you know as soon
-              as
-              {productName} supplements are ready.
+              Thanks for joining our journey. We'll let you know as soon as soon
+              as the {productName} supplements are ready.
             </p>
           </div>
         )}
