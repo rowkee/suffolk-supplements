@@ -27,6 +27,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, productName }) => {
             "Content-Type": "text/plain;charset=utf-8",
           },
           body: JSON.stringify({
+            type: "signup",
             email: email,
             productName: productName,
           }),
