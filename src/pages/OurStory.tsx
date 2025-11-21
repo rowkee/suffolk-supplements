@@ -2,154 +2,67 @@ import React from "react";
 
 const OurStory: React.FC = () => {
   return (
-    <div style={{ paddingTop: "80px", minHeight: "80vh" }}>
+    <div className="story-page-wrapper">
       <section className="products">
         <div className="container">
           <div className="section-header">
             <h2>Our Story</h2>
           </div>
-          <div
-            className="story-content"
-            style={{
-              maxWidth: "800px",
-              margin: "0 auto",
-              lineHeight: "1.8",
-            }}
-          >
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              Hello! I'm Rick, founder of Suffolk Supplements. I wanted to tell
-              you a little bit about how I came to be here and why our products
-              could be great for you. Unless you're at the absolute cutting
-              edge, a lot of tech work is just pushing pixels for products
-              nobody really needs.
+          <div className="story-content">
+            <p>Hello! I'm Rick, founder of Suffolk Supplements.</p>
+
+            <p>
+              I started this because the mushroom supplement industry has a
+              dirty secret:{" "}
+              <strong>
+                most mushroom supplements don't contain the active compounds
+                you're after.
+              </strong>{" "}
+              <br />
+              <br />
+              They're packed with mycelium grown on grain, which means you're
+              basically paying for oats with minimal active compounds. The
+              mushrooms never properly fruit, so the beneficial beta-glucans and
+              triterpenes you're after? They're barely there.
             </p>
 
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              I'm a Suffolk boy, and I did what most Suffolk boy do which is
-              move to London after university. I then went on to work in tech
-              the next decade. Now, after 10 long years I realise that unless
-              you're at the absolute cutting edge, a lot of tech work is just
-              pushing pixels for products nobody really needs.
+            <p>
+              When I moved back to Suffolk from London, I finally had space to
+              think clearly about what mattered. I wanted to build something
+              meaningful that actually helped people. Not another bullshit
+              wellness brand making empty promises.
             </p>
 
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              When I left London and to come back to Suffolk, I finally had
-              space to think clearly. I realised that I wanted to do something
-              that actually felt meaningful and incorporated the things I
-              learned to value in my career so far.
+            <h2>So here's what we do differently:</h2>
+
+            <ul>
+              <li>
+                We use 100% fruiting body extracts with verified active
+                compounds
+              </li>
+              <li>Small batch production so we can control quality</li>
+              <li>
+                We are 💯 committed to only selling products that are proven to
+                work
+              </li>
+            </ul>
+
+            <p>
+              The benefits of medicinal mushrooms are well established (I've
+              linked some studies below). We're not here to convince you, we're
+              here to give you a product that actually works so you can find out
+              for yourself.
             </p>
 
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              I wanted to:
-              <ul>
-                <li>Build something that actually feels meaningful.</li>
-                <li>Make products that meaningfully improve people's lives.</li>
-              </ul>
-            </p>
+            <h2>This is for you if you're:</h2>
 
-            <h2
-              style={{
-                fontSize: "1.6rem",
-                marginTop: "2.5rem",
-                marginBottom: "1.5rem",
-                color: "#4a90a4",
-              }}
-            >
-              How I Found Mushrooms
-            </h2>
+            <ul>
+              <li>Curious and like experimenting</li>
+              <li>Sick of supplements that do nothing</li>
+              <li>Want honest products from someone who gives a shit</li>
+            </ul>
 
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              I'd like to preface this with the fact that I'm not an alternative
-              medicine or wellness nut. Most of it feels like marketing dressed
-              up as science.
-            </p>
-
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              But I've always been fascinated by natural products that have real
-              research behind them. I love experimenting—trying things out,
-              seeing if they actually deliver on their claims.
-            </p>
-
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              That's how I stumbled onto functional mushrooms. I started
-              researching Lion's Mane, dug into the actual studies, and thought
-              "let's see if this is real." Tried it myself. It worked.
-            </p>
-
-            <h2
-              style={{
-                fontSize: "1.6rem",
-                marginTop: "2.5rem",
-                marginBottom: "1.5rem",
-                color: "#4a90a4",
-              }}
-            >
-              Why Suffolk?
-            </h2>
-
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              Once I knew this stuff was legitimate, I had a simple question:
-              Lion's Mane grows in Suffolk. So why isn't anyone doing this
-              properly here?
-            </p>
-
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              The market's flooded with low-quality extracts, mostly starch
-              filler from questionable sources. I saw an opportunity to make
-              something clean, local, and genuinely effective.
-            </p>
-
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              Everything aligned: real product, real benefits, real science.
-              Suffolk-grown.
-            </p>
-
-            <h2
-              style={{
-                fontSize: "1.6rem",
-                marginTop: "2.5rem",
-                marginBottom: "1.5rem",
-                color: "#4a90a4",
-              }}
-            >
-              What I'm Building
-            </h2>
-
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              Products that actually improve people's lives. Natural doesn't
-              mean unscientific—it means both. Quality over marketing. If you
-              make something good, people come back.
-            </p>
-
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              I'm growing these mushrooms myself, small batch, with complete
-              transparency. No compromises on ingredients or process.
-            </p>
-
-            <h2
-              style={{
-                fontSize: "1.6rem",
-                marginTop: "2.5rem",
-                marginBottom: "1.5rem",
-                color: "#4a90a4",
-              }}
-            >
-              The Honest Truth
-            </h2>
-
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              I know this sounds like snake oil. The wellness industry has
-              earned that reputation.
-            </p>
-
-            <p style={{ marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-              But the research is solid. I'm growing these in Suffolk, testing
-              everything, and being completely transparent about the process.
-            </p>
-
-            <p style={{ fontSize: "1.1rem" }}>
-              Try it. See if it works for you. That's all I ask.
-            </p>
+            <p>I answer all messages personally. Get in touch anytime.</p>
           </div>
         </div>
       </section>

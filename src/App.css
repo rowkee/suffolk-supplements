@@ -713,3 +713,37 @@ img.mushroom-icon {
     justify-content: center;
   }
 }
+
+/* Our Story Page Styles */
+.story-page-wrapper {
+  padding-top: 80px;
+  min-height: 80vh;
+}
+
+.story-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.story-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.story-content h2 {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #4a90a4;
+}
+
+.story-content ul {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  padding-left: 1.5rem;
+}
+
+.story-content li {
+  margin-bottom: 0.5rem;
+}
